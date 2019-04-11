@@ -1,0 +1,217 @@
+<rss version="2.0">
+    <channel>
+        <title>Hacker News</title>
+        <link>https://news.ycombinator.com/</link>
+        <description>Links for the intellectually curious, ranked by readers.</description>
+        <item>
+            <title>Public Sans – A strong, neutral typeface for text or display</title>
+            <link>https://public-sans.digital.gov/</link>
+            <pubDate>Mon, 8 Apr 2019 17:45:52 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19607371</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19607371">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>No one, not even the Secret Service, should randomly plug in a strange USB stick</title>
+            <link>https://techcrunch.com/2019/04/08/secret-service-mar-a-lago/</link>
+            <pubDate>Mon, 8 Apr 2019 21:29:42 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19609239</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19609239">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Microsoft says its data shows FCC reports overstate broadband adoption</title>
+            <link>https://techcrunch.com/2019/04/08/microsoft-says-its-data-shows-fcc-reports-massively-overstate-broadband-adoption/</link>
+            <pubDate>Tue, 9 Apr 2019 00:31:56 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19610530</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19610530">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>In a future version of macOS, notarization will be required by default</title>
+            <link>https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution?language=objc</link>
+            <pubDate>Mon, 8 Apr 2019 22:21:31 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19609653</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19609653">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>It seems that Google is forgetting the old web</title>
+            <link>http://stop.zona-m.net/2018/01/indeed-it-seems-that-google-is-forgetting-the-old-web/</link>
+            <pubDate>Mon, 8 Apr 2019 11:22:30 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19604135</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19604135">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Mathematics and Computation [pdf]</title>
+            <link>https://www.math.ias.edu/files/Website03-25-19.pdf#page=1</link>
+            <pubDate>Mon, 8 Apr 2019 22:16:22 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19609613</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19609613">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Zig 0.4.0 Released</title>
+            <link>https://ziglang.org/download/0.4.0/release-notes.html</link>
+            <pubDate>Mon, 8 Apr 2019 23:31:48 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19610199</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19610199">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Google Cloud Run (beta) pricing, including free tier</title>
+            <link>https://cloud.google.com/run/pricing</link>
+            <pubDate>Tue, 9 Apr 2019 01:26:30 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19610830</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19610830">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Bleve: Full-text search and indexing for Go</title>
+            <link>http://blevesearch.com/</link>
+            <pubDate>Mon, 8 Apr 2019 14:19:09 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19605413</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19605413">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Aroma: Using machine learning for code recommendation</title>
+            <link>https://ai.facebook.com/blog/aroma-ml-for-code-recommendation/</link>
+            <pubDate>Mon, 8 Apr 2019 16:41:56 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19606794</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19606794">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>A majority of consumers do not expect Google to track their activities</title>
+            <link>https://www.niemanlab.org/2019/04/does-google-meet-its-users-expectations-around-consumer-privacy-this-news-industry-research-says-no/</link>
+            <pubDate>Mon, 8 Apr 2019 17:41:45 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19607329</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19607329">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>A modern c&#x2F;c++ build utility, easier to use than cmake</title>
+            <link>https://github.com/xmake-io/xmake</link>
+            <pubDate>Tue, 9 Apr 2019 00:16:28 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19610459</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19610459">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Activation Atlases</title>
+            <link>https://openai.com/blog/introducing-activation-atlases/</link>
+            <pubDate>Mon, 8 Apr 2019 13:57:29 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19605218</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19605218">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>An epidemic of fake influencers and the death of meritocracy</title>
+            <link>http://behindthequest.com/instagram-frauds-fake-influencers/</link>
+            <pubDate>Mon, 8 Apr 2019 16:25:25 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19606635</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19606635">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>BuildZoom (YC W13) is hiring. Help us un-break construction</title>
+            <link>https://jobs.lever.co/buildzoom</link>
+            <pubDate>Tue, 9 Apr 2019 00:46:54 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19610604</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19610604">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Permanent Magnetic Materials Without Rare Earth Metals</title>
+            <link>http://www.diva-portal.org/smash/record.jsf?pid=diva2:1295906</link>
+            <pubDate>Mon, 8 Apr 2019 18:20:29 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19607710</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19607710">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>The Physical Sacrifice of Thinking</title>
+            <link>https://journals.sagepub.com/doi/full/10.1177/1359105314565827</link>
+            <pubDate>Mon, 8 Apr 2019 15:34:53 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19606141</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19606141">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>58 Bytes of CSS to look great nearly everywhere</title>
+            <link>https://jrl.ninja/etc/1</link>
+            <pubDate>Mon, 8 Apr 2019 17:23:06 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19607169</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19607169">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Characterizing secret leakage in public GitHub repositories</title>
+            <link>https://blog.acolyer.org/2019/04/08/how-bad-can-it-git-characterizing-secret-leakage-in-public-github-repositories/</link>
+            <pubDate>Mon, 8 Apr 2019 05:03:15 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19602279</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19602279">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>“I have let Whitman alone”</title>
+            <link>https://www.nybooks.com/articles/2019/04/18/walt-whitman-alone/</link>
+            <pubDate>Mon, 8 Apr 2019 20:41:36 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19608803</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19608803">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>US Workers Are Highly Taxed If You Count Premiums</title>
+            <link>https://www.peoplespolicyproject.org/2019/04/08/us-workers-are-highly-taxed-when-you-count-health-premiums/</link>
+            <pubDate>Mon, 8 Apr 2019 21:24:40 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19609191</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19609191">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>J Language – New Website</title>
+            <link>https://www.jsoftware.com/#/</link>
+            <pubDate>Mon, 8 Apr 2019 23:58:46 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19610361</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19610361">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>A Message-Passing Interpretation of Adjoint Logic [pdf]</title>
+            <link>http://www.cs.cmu.edu/~fp/papers/mpiadj19.pdf</link>
+            <pubDate>Mon, 8 Apr 2019 14:21:28 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19605435</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19605435">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Our Stripe Billing implementation and the one webhook to rule them all</title>
+            <link>https://blog.checklyhq.com/our-stripe-billing-implementation-the-one-webhook-to-rule-them-all/</link>
+            <pubDate>Mon, 8 Apr 2019 19:10:22 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19608140</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19608140">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Let&#x27;s Talk About Capacitor Failure</title>
+            <link>https://bytecellar.com/2019/04/07/lets-talk-about-capacitor-failure/</link>
+            <pubDate>Mon, 8 Apr 2019 16:30:36 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19606691</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19606691">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>A gentle introduction to symbolic execution</title>
+            <link>https://blog.monic.co/a-gentle-introduction-to-symbolic-execution/</link>
+            <pubDate>Mon, 8 Apr 2019 14:57:42 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19605761</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19605761">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Search all Craigslist cities for a remote job</title>
+            <link>https://remotejobs.today/</link>
+            <pubDate>Mon, 8 Apr 2019 21:40:54 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19609317</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19609317">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Fortnite and the Good Life</title>
+            <link>https://tinyletter.com/lmsacasas/letters/the-convivial-society-no-15-fortnite-and-the-good-life</link>
+            <pubDate>Mon, 8 Apr 2019 17:31:35 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19607232</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19607232">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>On Startup Capital Efficiency</title>
+            <link>https://stevecheney.com/on-startup-capital-efficiency/</link>
+            <pubDate>Mon, 8 Apr 2019 15:38:12 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19606169</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19606169">Comments</a>]]></description>
+        </item>
+        <item>
+            <title>Lady Warnock Obituary</title>
+            <link>https://www.theguardian.com/books/2019/mar/21/lady-warnock-obituary</link>
+            <pubDate>Mon, 8 Apr 2019 20:49:16 +0000</pubDate>
+            <comments>https://news.ycombinator.com/item?id=19608872</comments>
+            <description><![CDATA[<a href="https://news.ycombinator.com/item?id=19608872">Comments</a>]]></description>
+        </item>
+    </channel>
+</rss>
