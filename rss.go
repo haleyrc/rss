@@ -2,7 +2,6 @@ package rss
 
 import (
 	"encoding/xml"
-	"fmt"
 	"io"
 )
 
@@ -30,6 +29,5 @@ func Load(r io.Reader) (Feed, error) {
 	if err := xml.NewDecoder(r).Decode(&feed); err != nil {
 		return Feed{}, err
 	}
-	fmt.Printf("%#v\n", feed.Channel.Items)
 	return feed, nil
 }
