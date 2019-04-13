@@ -1,91 +1,105 @@
 package rss
 
 import (
-	"encoding/xml"
-	"io"
-	"strconv"
+	"errors"
+	"log"
 	"strings"
+	"time"
+
+	"github.com/haleyrc/rss/parser"
 )
 
-const (
-	TagStartContentEncoded = `<content:encoded>`
-	TagEndContentEncoded   = `</content:encoded>`
+var (
+	ErrTitleRequired         = errors.New("title is required")
+	ErrDescriptionIsRequired = errors.New("description is required")
+	ErrLinkRequired          = errors.New("link is required")
+	ErrFeedRequired          = errors.New("feed is required")
 )
 
-type Feed struct {
-	Channel Channel `xml:"channel"`
-}
-
-type Channel struct {
-	Title       string `xml:"title"`
-	Description string `xml:"description"`
-	Link        string `xml:"Default link"`
-	Image       string `xml:"image>url"`
-	Items       []Item `xml:"item"`
-}
-
-type Item struct {
-	Title           string `xml:"title"`
-	Description     string `xml:"description"`
-	Link            string `xml:"Default link"`
-	PublicationDate string `xml:"pubDate"`
-}
-
-func Load(r io.Reader) (Feed, error) {
-	var feed Feed
-	dec := xml.NewDecoder(r)
-	dec.DefaultSpace = "Default"
-	if err := dec.Decode(&feed); err != nil {
-		return Feed{}, err
+func NewFeed(title, description, link, image string, items ...*Item) (*Feed, error) {
+	title = strings.TrimSpace(title)
+	if title == "" {
+		return nil, ErrTitleRequired
 	}
+	description = strings.TrimSpace(description)
+	if description == "" {
+		return nil, ErrDescriptionIsRequired
+	}
+	link = strings.TrimSpace(link)
+	if link == "" {
+		return nil, ErrLinkRequired
+	}
+	image = strings.TrimSpace(image)
+	return &Feed{
+		Title:       title,
+		Description: description,
+		Link:        link,
+		Image:       image,
+		Items:       items,
+	}, nil
+}
 
+func NewFromChannel(c parser.Channel) (*Feed, error) {
+	var items []*Item
+	for _, item := range c.Items {
+		pubDate, err := time.Parse(time.RFC1123, item.PublicationDate)
+		if err != nil {
+			log.Printf("error parsing publication date: %s: %v: skipping\n", item.PublicationDate, err)
+			continue
+		}
+		newItem, err := NewItem(-1, item.Title, item.Link, pubDate)
+		if err != nil {
+			log.Printf("invalid item: %v: skipping\n", err)
+			continue
+		}
+		items = append(items, newItem)
+	}
+	feed, err := NewFeed(c.Title, c.Description, c.Link, c.Image, items...)
+	if err != nil {
+		return nil, err
+	}
 	return feed, nil
 }
 
-func Quote(input, startTag, endTag string) string {
-	return ProcessElementText(input, startTag, endTag, strconv.Quote)
+type Feed struct {
+	ID          int64
+	Title       string
+	Description string
+	Link        string
+	Image       string
+	Items       []*Item
 }
 
-type StringModifierFunc func(input string) string
-
-func ProcessElementText(input, startTag, endTag string, f StringModifierFunc) string {
-	var output strings.Builder
-
-	currentIndex := 0
-	for {
-		// 1. Find index of first start tag
-		startTagIndex := strings.Index(input[currentIndex:], startTag)
-		if startTagIndex == -1 {
-			// 9. Append the rest
-			output.WriteString(input[currentIndex:])
-			// 10. Return the result
-			return output.String()
-		}
-		startTagIndex += currentIndex
-
-		// 2. Advance the index by the length of the start tag
-		startTagIndex += len(startTag)
-
-		// 3. Append everything up to end of the start tag
-		output.WriteString(input[currentIndex:startTagIndex])
-
-		// 4. Find the index of the first end tag
-		endTagIndex := strings.Index(input[startTagIndex:], endTag)
-		if endTagIndex == -1 {
-			// This is a malformed string with no matching end tag
-			return ""
-		}
-		endTagIndex += startTagIndex
-
-		// 5. Append the modified version of the interstitial text
-		output.WriteString(f(input[startTagIndex:endTagIndex]))
-
-		// 6. Append the end tag
-		output.WriteString(endTag)
-
-		// 7. Advance the index by the length of the end tag
-		currentIndex = endTagIndex + len(endTag)
-
-		// 8. Repeat from step 1 until start tag not present
+func NewItem(feed int64, title, link string, pub time.Time) (*Item, error) {
+	if feed == 0 {
+		return nil, ErrFeedRequired
 	}
+	title = strings.TrimSpace(title)
+	if title == "" {
+		return nil, ErrTitleRequired
+	}
+	link = strings.TrimSpace(link)
+	if link == "" {
+		return nil, ErrLinkRequired
+	}
+	if pub.IsZero() {
+		pub = time.Now()
+	}
+	return &Item{
+		FeedID:          feed,
+		Title:           title,
+		Link:            link,
+		PublicationDate: pub,
+	}, nil
+}
+
+type Item struct {
+	ID              int64     `db:"id"`
+	FeedID          int64     `db:"feed_id"`
+	Title           string    `db:"title"`
+	Link            string    `db:"link"`
+	PublicationDate time.Time `db:"publication_date"`
+	Read            bool      `db:"read"`
+	Starred         bool      `db:"starred"`
+	Ignored         bool      `db:"ignored"`
 }
