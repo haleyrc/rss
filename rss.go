@@ -16,6 +16,20 @@ var (
 	ErrFeedRequired          = errors.New("feed is required")
 )
 
+type Repository interface {
+	CreateFeed(feed *Feed, items ...*Item) error
+	RemoveFeed(id int64) error
+	CreateItem(item *Item) error
+	GetItem(id int64) (*Item, error)
+	ReadItem(id int64) error
+	UnreadItem(id int64) error
+	IgnoreItem(id int64) error
+	UnignoreItem(id int64) error
+	StarItem(id int64) error
+	UnstarItem(id int64) error
+	ListItems(limit int) ([]*Item, error)
+}
+
 func NewFeed(title, description, link, image string, items ...*Item) (*Feed, error) {
 	title = strings.TrimSpace(title)
 	if title == "" {
@@ -62,12 +76,12 @@ func NewFromChannel(c parser.Channel) (*Feed, error) {
 }
 
 type Feed struct {
-	ID          int64
-	Title       string
-	Description string
-	Link        string
-	Image       string
-	Items       []*Item
+	ID          int64   `db:"id" json:"id"`
+	Title       string  `db:"title" json:"title"`
+	Description string  `db:"description" json:"description"`
+	Link        string  `db:"link" json:"link"`
+	Image       string  `db:"image" json:"image"`
+	Items       []*Item `db:"-" json:"items"`
 }
 
 func NewItem(feed int64, title, link string, pub time.Time) (*Item, error) {
@@ -94,12 +108,12 @@ func NewItem(feed int64, title, link string, pub time.Time) (*Item, error) {
 }
 
 type Item struct {
-	ID              int64     `db:"id"`
-	FeedID          int64     `db:"feed_id"`
-	Title           string    `db:"title"`
-	Link            string    `db:"link"`
-	PublicationDate time.Time `db:"publication_date"`
-	Read            bool      `db:"read"`
-	Starred         bool      `db:"starred"`
-	Ignored         bool      `db:"ignored"`
+	ID              int64     `db:"id" json:"id"`
+	FeedID          int64     `db:"feed_id" json:"feedID"`
+	Title           string    `db:"title" json:"title"`
+	Link            string    `db:"link" json:"link"`
+	PublicationDate time.Time `db:"publication_date" json:"publicationDate"`
+	Read            bool      `db:"read" json:"read"`
+	Starred         bool      `db:"starred" json:"starred"`
+	Ignored         bool      `db:"ignored" json:"ignored"`
 }

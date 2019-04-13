@@ -12,25 +12,18 @@ const (
 	AllItems int = 0
 )
 
-type Repository interface {
-	CreateFeed(feed *rss.Feed, items ...*rss.Item) error
-	CreateItem(item *rss.Item) error
-	GetItem(id int64) (*rss.Item, error)
-	ReadItem(id int64) error
-	UnreadItem(id int64) error
-	IgnoreItem(id int64) error
-	UnignoreItem(id int64) error
-	StarItem(id int64) error
-	UnstarItem(id int64) error
-	ListItems(limit int) ([]*rss.Item, error)
-}
-
-func New(db *sqlx.DB) Repository {
+func New(db *sqlx.DB) rss.Repository {
 	return &repository{db}
 }
 
 type repository struct {
 	db *sqlx.DB
+}
+
+func (r *repository) RemoveFeed(id int64) error {
+	q := `DELETE FROM feeds WHERE id = $1`
+	_, err := r.db.Exec(q, id)
+	return err
 }
 
 func (r *repository) ListItems(limit int) ([]*rss.Item, error) {
